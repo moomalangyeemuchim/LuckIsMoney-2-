@@ -372,7 +372,7 @@ public class LuckLsMoney2 {
 				total2 += p.hap2;
 				int Total = total1 + total2;
 
-				System.out.printf("[ 이번 획득 점수: %d, 일반 점수: %d, 특수 점수: %d, 전체 점수: %d]\n", p.hap1 + p.hap2, total1, total2,
+				System.out.printf("[ 이번 획득 점수: %d, 일반 점수: %d, 특수 점수: %d, 획득 점수: %d]\n", p.hap1 + p.hap2, total1, total2,
 						Total);
 				System.out.print("현재 선택된 키워드 : ");
 				for (String c : keyword)
@@ -388,10 +388,12 @@ public class LuckLsMoney2 {
 		if (total1 >= 63) {
 			total1 += 35;
 			System.out.println("[보너스 조건 충족] 일반 점수가 63점 이상일 시 35점 추가 획득");
+
 		}
 
 		int Total = total1 + total2;
 		int rank = 0;
+		System.out.printf("최종 점수 : %d\n", Total);
 
 		if (Total >= 220) {
 			rank = 1;
